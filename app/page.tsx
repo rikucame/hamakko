@@ -1,5 +1,12 @@
+import Carousel from "components/carousel";
+
 const Page = () => {
-  return <p>hoge</p>;
+  return (
+    <>
+      <p>hoge</p>
+      <Carousel />
+    </>
+  );
 };
 
 export default Page;
