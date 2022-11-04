@@ -1,9 +1,9 @@
-import Carousel from "components/carousel";
+import Carousel from "../components/Carousel";
 
 const Page = () => {
   return (
     <>
-      <p>hoge</p>
+      {/* <p className={style.pageTitle}>hoge</p> */}
       <Carousel />
     </>
   );
