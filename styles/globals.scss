@@ -1,15 +1,14 @@
-@import "swiper/scss";
-@import "swiper/scss/pagination";
-
 html,
 body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: #ececec;
 }
 
 main {
-  background-color: brown;
-  max-width: 70ch;
+  width: min(100%, 1200px);
+  height: 80vh;
+  // background-color: #ececec;
   margin: 0 auto;
 }
 

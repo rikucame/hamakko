@@ -1,9 +1,11 @@
 "use client";
 
-import PhotoThumbnail from "../PhotoThumbnail";
-import Image from "next/image";
+import { PhotoThumbnail } from "../PhotoThumbnail";
 import { Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/scss";
+import "swiper/scss/pagination";
+import "@/styles/swiperCustom.scss";
 
 const Carousel = () => {
   return (
@@ -24,20 +26,17 @@ const Carousel = () => {
         {/* Slide 1 */}
       </SwiperSlide>
       <SwiperSlide>
-        <Image
+        <PhotoThumbnail
           src={"/photos/DSCF6519.jpg"}
-          width={230}
-          height={300}
-          alt={"photo"}
+          title={"portrait"}
+          href={"/"}
         />
-        <p>hogehogehgoe</p>
       </SwiperSlide>
       <SwiperSlide>
-        <Image
+        <PhotoThumbnail
           src={"/photos/DSCF6627.jpg"}
-          width={230}
-          height={300}
-          alt={"photo"}
+          title={"portrait"}
+          href={"/"}
         />
       </SwiperSlide>
     </Swiper>
