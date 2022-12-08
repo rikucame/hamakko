@@ -4,7 +4,7 @@ $frame-size: 82vw;
   display: flex;
   justify-content: center;
   width: 100%;
-  padding: 150px 0;
+  padding: 50px 0;
 }
 
 .title {
@@ -15,7 +15,7 @@ $frame-size: 82vw;
 
 .frame {
   border: #333 1rem solid;
-  box-shadow: 2px 4px 10px 5px rgba(0, 0, 0, 0.45) inset,
+  box-shadow: 2px 4px 6px 4px rgba(0, 0, 0, 0) inset,
     6px 7px 11px -2px rgba(0, 0, 0, 0.45),
     -6px -7px 15px -2px rgba(250, 250, 250, 0.938);
   position: relative;
@@ -55,7 +55,7 @@ $frame-size: 82vw;
   width: calc($frame-size - 188px);
   height: calc($frame-size * (4 / 3) - 188px);
   object-fit: cover;
-  border: 0.75rem solid;
+  border: 0.5rem solid;
   border-color: #aaaaaa #dee0db #ebecec #bdbdbd;
 }
 
@@ -82,7 +82,7 @@ $frame-size: 82vw;
     @extend .shadowCommon;
     bottom: -45px;
     right: 0px;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.27);
     width: calc(100% - 25px);
     transform: skewX(3deg);
   }

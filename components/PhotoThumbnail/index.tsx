@@ -1,10 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { type } from "os";
 import { FC } from "react";
 import style from "./style.module.scss";
-
-type Shadow = "left" | "center" | "right";
 
 type Props = {
   title: string;
