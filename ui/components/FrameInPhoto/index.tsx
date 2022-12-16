@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FC } from "react";
+import { H2 } from "../HiddenHeading";
 import style from "./style.module.scss";
 
 type Props = {
@@ -10,14 +11,14 @@ type Props = {
   isVertical?: boolean;
 };
 
-export const PhotoThumbnail: FC<Props> = ({ title, href, src, isVertical }) => {
+export const FrameInPhoto: FC<Props> = ({ title, href, src, isVertical }) => {
   return (
-    <div key={title} className={style.wrapper}>
+    <div key={title} className={style.frameWrapper}>
       <Link
         href={href}
         className={isVertical ? style.frameVertical : style.frameHorizontal}
       >
-        <h2 className={style.title}>{title}</h2>
+        <H2 title={title} />
         <Image
           src={src}
           width={1000}
@@ -25,8 +26,9 @@ export const PhotoThumbnail: FC<Props> = ({ title, href, src, isVertical }) => {
           alt={title}
           className={style.photo}
         />
-        <span className={style.shadowCenter} />
+        <span className={style.shadow} />
       </Link>
+      <span className={style.highLight} />
     </div>
   );
 };

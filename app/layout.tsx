@@ -5,13 +5,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   // const router = useNavigation();
   return (
     <html>
-      <head></head>
+      <head>
+        <link rel="stylesheet" href="https://use.typekit.net/sqa7avw.css" />
+      </head>
       <body>
-        <main>
-          <p>レイアウトです</p>
-
-          {children}
-        </main>
+        <main>{children}</main>
       </body>
     </html>
   );
