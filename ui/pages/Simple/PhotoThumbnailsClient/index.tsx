@@ -1,9 +1,9 @@
 "use client";
 
 import { FC } from "react";
-import { FrameInPhoto } from "@/components/FrameInPhoto";
 import { Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
+import Image from "next/image";
 
 import "swiper/scss";
 import "swiper/scss/pagination";
@@ -20,7 +20,7 @@ type Props = {
   setTitle: (title: string) => void;
 };
 
-export const PhotoThumbnails: FC<Props> = ({ setTitle }) => {
+export const PhotoThumbnailsClient: FC<Props> = ({ setTitle }) => {
   return (
     <Swiper
       spaceBetween={50}
@@ -33,7 +33,7 @@ export const PhotoThumbnails: FC<Props> = ({ setTitle }) => {
     >
       {list.map(({ title, src, href }) => (
         <SwiperSlide key={title}>
-          <FrameInPhoto src={src} title={title} href={href} />
+          <Image src={src} width={1000} height={1000} alt={title} />
         </SwiperSlide>
       ))}
     </Swiper>
