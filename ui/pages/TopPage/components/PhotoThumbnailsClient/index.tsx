@@ -1,3 +1,5 @@
+"use client";
+
 import { FC } from "react";
 import { FrameInPhoto } from "@/components/FrameInPhoto";
 import { Pagination } from "swiper";
@@ -18,13 +20,13 @@ type Props = {
   setTitle: (title: string) => void;
 };
 
-export const PhotoThumbnails: FC<Props> = ({ setTitle }) => {
+export const PhotoThumbnailsClient: FC<Props> = ({ setTitle }) => {
   return (
     <Swiper
       spaceBetween={50}
       slidesPerView={1}
       modules={[Pagination]}
-      pagination={{ clickable: false, dynamicBullets: true }}
+      pagination={{ clickable: false }}
       onSlideChange={(s) => {
         setTitle(list[s.activeIndex].title);
       }}

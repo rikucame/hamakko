@@ -1,0 +1,40 @@
+$frame-size: 82vw;
+$border-weight: 1rem;
+
+.frameWrapper {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  padding: 100px 0 50px;
+}
+
+.frame {
+  border: #333 $border-weight solid;
+  box-shadow: 0px 10px 6px -2px rgba(0, 0, 0, 0.5) inset;
+  position: relative;
+  background-color: #f6f6f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &Vertical {
+    @extend .frame;
+    width: calc($frame-size * (3 / 4));
+    height: $frame-size;
+  }
+
+  &Horizontal {
+    @extend .frame;
+    width: $frame-size;
+    height: calc($frame-size * (4 / 3));
+  }
+}
+
+.photo {
+  display: block;
+  width: calc($frame-size - 188px);
+  height: calc($frame-size * (4 / 3) - 188px);
+  object-fit: cover;
+  border: 0.5rem solid;
+  border-color: #aaaaaa #dee0db #ebecec #bdbdbd;
+}
