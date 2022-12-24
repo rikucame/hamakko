@@ -1,12 +1,9 @@
-"use client";
-
 import { FC } from "react";
 import { Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import Image from "next/image";
 
-import "swiper/scss";
-import "swiper/scss/pagination";
+import "swiper/css";
+import "swiper/css/pagination";
 import "@/styles/swiperCustom.scss";
 import "./style.scss";
 import { FrameInPhoto } from "@/components/FrameInPhoto";
@@ -27,7 +24,7 @@ export const PhotoThumbnailsClient: FC<Props> = ({ setTitle }) => {
       spaceBetween={50}
       slidesPerView={1}
       modules={[Pagination]}
-      pagination={{ clickable: false }}
+      pagination={{ clickable: false, dynamicBullets: true }}
       onSlideChange={(s) => {
         setTitle(list[s.activeIndex].title);
       }}
