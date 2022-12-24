@@ -9,6 +9,7 @@ import "swiper/scss";
 import "swiper/scss/pagination";
 import "@/styles/swiperCustom.scss";
 import "./style.scss";
+import { FrameInPhoto } from "@/components/FrameInPhoto";
 
 const list = [
   { title: "portrait", src: "/photos/0_thumbnail.jpg", href: "/" },
@@ -33,7 +34,7 @@ export const PhotoThumbnailsClient: FC<Props> = ({ setTitle }) => {
     >
       {list.map(({ title, src, href }) => (
         <SwiperSlide key={title}>
-          <Image src={src} width={1000} height={1000} alt={title} />
+          <FrameInPhoto src={src} title={title} href={href} />
         </SwiperSlide>
       ))}
     </Swiper>
