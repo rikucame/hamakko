@@ -11,7 +11,7 @@ export const TopPage = () => {
   const [title, setTitle] = useState("portrait");
   return (
     <>
-      <div className={style.carouselWrap}>
+      {/* <div className={style.carouselWrap}>
         <PhotoThumbnails setTitle={setTitle} />
       </div>
       <div className={style.carouselWrap}>
@@ -19,7 +19,7 @@ export const TopPage = () => {
       </div>
       <div className={style.carouselWrap}>
         <PhotoThumbnailsSimple setTitle={setTitle} />
-      </div>
+      </div> */}
       <div className={style.carouselWrap}>
         <PhotoThumbnailsNonShadow setTitle={setTitle} />
       </div>
