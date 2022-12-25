@@ -1,12 +1,11 @@
 import { FC } from "react";
 import { Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-
-import "swiper/scss";
-import "swiper/scss/pagination";
-import "@/styles/swiperCustom.scss";
-import "./style.scss";
 import { FrameInPhotoNonShadow } from "@/components/FrameInPhotoNonShadow";
+
+import "swiper/css";
+import "swiper/css/pagination";
+import "./style.scss";
 
 const list = [
   { title: "portrait", src: "/photos/0_thumbnail.jpg", href: "/" },

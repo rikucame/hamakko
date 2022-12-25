@@ -1,5 +1,5 @@
-$frame-size: 82vw;
-$border-weight: 1rem;
+$frame-long-side: 84vw;
+$border-weight: 16px;
 
 .frameWrapper {
   display: flex;
@@ -19,21 +19,21 @@ $border-weight: 1rem;
   align-items: center;
   &Vertical {
     @extend .frame;
-    width: calc($frame-size * (3 / 4));
-    height: $frame-size;
+    width: calc($frame-long-side * (3 / 4));
+    height: $frame-long-side;
   }
 
   &Horizontal {
     @extend .frame;
-    width: $frame-size;
-    height: calc($frame-size * (4 / 3));
+    width: $frame-long-side;
+    height: calc($frame-long-side * (4 / 3));
   }
 }
 
 .photo {
   display: block;
-  width: calc($frame-size - 188px);
-  height: calc($frame-size * (4 / 3) - 188px);
+  width: calc($frame-long-side - 188px);
+  height: calc($frame-long-side * (4 / 3) - 188px);
   object-fit: cover;
   border: 0.5rem solid;
   border-color: #aaaaaa #dee0db #ebecec #bdbdbd;

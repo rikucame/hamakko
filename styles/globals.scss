@@ -22,3 +22,13 @@ a {
   margin: 0;
   box-sizing: border-box;
 }
+
+// Swiperの設定
+:root {
+  --swiper-theme-color: rgb(101, 157, 176);
+}
+
+.swiper-pagination-bullet-active {
+  width: 20px;
+  height: 20px;
+}

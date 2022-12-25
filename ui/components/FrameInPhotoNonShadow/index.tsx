@@ -31,9 +31,8 @@ export const FrameInPhotoNonShadow: FC<Props> = ({
           alt={title}
           className={style.photo}
         />
-        {/* <span className={style.shadow} /> */}
+        <span className={style.shadow} />
       </Link>
-      {/* <span className={style.highLight} /> */}
     </div>
   );
 };
