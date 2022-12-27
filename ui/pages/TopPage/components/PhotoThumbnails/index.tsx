@@ -28,7 +28,6 @@ export const PhotoThumbnails: FC<Props> = ({ setTitle }) => {
       modules={[Pagination]}
       pagination={{
         clickable: false,
-        dynamicBullets: true,
       }}
       onSlideChange={(s) => {
         setTitle(list[s.activeIndex].title);
