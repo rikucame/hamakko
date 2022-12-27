@@ -6,9 +6,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/scss";
 import "swiper/scss/pagination";
 import "@/styles/swiperCustom.scss";
-import "./style.scss";
 
 const list = [
+  { title: "portrait", src: "/photos/0_thumbnail.jpg", href: "/" },
+  { title: "snap", src: "/photos/DSCF5579.jpg", href: "/" },
+  { title: "mode", src: "/photos/DSCF6627.jpg", href: "/" },
   { title: "portrait", src: "/photos/0_thumbnail.jpg", href: "/" },
   { title: "snap", src: "/photos/DSCF5579.jpg", href: "/" },
   { title: "mode", src: "/photos/DSCF6627.jpg", href: "/" },
@@ -24,7 +26,10 @@ export const PhotoThumbnails: FC<Props> = ({ setTitle }) => {
       spaceBetween={50}
       slidesPerView={1}
       modules={[Pagination]}
-      pagination={{ clickable: false, dynamicBullets: true }}
+      pagination={{
+        clickable: false,
+        dynamicBullets: true,
+      }}
       onSlideChange={(s) => {
         setTitle(list[s.activeIndex].title);
       }}

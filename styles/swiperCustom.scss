@@ -1,0 +1,16 @@
+:root {
+  --swiper-theme-color: rgb(101, 157, 176);
+}
+
+.swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+  border-radius: 0;
+}
+
+.swiper-pagination {
+  width: 160px !important;
+  top: 50px;
+  height: 30px;
+  align-items: center;
+}

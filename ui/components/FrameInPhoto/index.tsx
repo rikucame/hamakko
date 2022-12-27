@@ -14,6 +14,7 @@ type Props = {
 export const FrameInPhoto: FC<Props> = ({ title, href, src, isVertical }) => {
   return (
     <div key={title} className={style.frameWrapper}>
+      <span className={style.highLight} />
       <Link
         href={href}
         className={isVertical ? style.frameVertical : style.frameHorizontal}
@@ -26,9 +27,7 @@ export const FrameInPhoto: FC<Props> = ({ title, href, src, isVertical }) => {
           alt={title}
           className={style.photo}
         />
-        <span className={style.shadow} />
       </Link>
-      <span className={style.highLight} />
     </div>
   );
 };
