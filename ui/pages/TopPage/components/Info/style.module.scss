@@ -1,0 +1,31 @@
+.wrap {
+  max-inline-size: max-content;
+  margin-inline: auto;
+  width: 70%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 4px;
+
+  &Item {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.photo {
+  object-fit: cover;
+}
+
+.more {
+  text-align: center;
+  font-size: 2rem;
+  &And {
+    font-size: 6rem;
+  }
+}

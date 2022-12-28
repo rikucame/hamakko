@@ -20,7 +20,7 @@ $border-weight: 16px;
   box-shadow: 4px 10px 6px -2px rgba(0, 0, 0, 0.5) inset,
     -18px -28px 28px -6px #fff;
   position: relative;
-  background-color: #f6f6f6;
+  background-color: #ededed;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,11 +31,11 @@ $border-weight: 16px;
     left: -$border-weight;
     background-color: transparent;
     opacity: 0.7;
-    width: calc(100% + 12px);
+    width: calc(100% + 8px);
     height: 1px;
     border-top: 16px solid rgb(73, 73, 73);
     border-left: 12px solid transparent;
-    border-right: 8px solid transparent;
+    border-right: 12px solid transparent;
     z-index: -1;
   }
 
@@ -46,7 +46,7 @@ $border-weight: 16px;
     background-color: rgb(126, 126, 126);
     opacity: 0.4;
     width: calc(100% + $border-weight * 2);
-    height: calc(100% + $border-weight * 2 + 26px);
+    height: calc(100% + $border-weight * 2 + 30px);
     z-index: -1;
     border-radius: 2px;
   }
