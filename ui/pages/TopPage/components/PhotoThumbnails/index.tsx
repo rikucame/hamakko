@@ -11,6 +11,9 @@ const list = [
   { title: "portrait", src: "/photos/0_thumbnail.jpg", href: "/" },
   { title: "snap", src: "/photos/DSCF5579.jpg", href: "/" },
   { title: "mode", src: "/photos/DSCF6627.jpg", href: "/" },
+  { title: "portrait", src: "/photos/0_thumbnail.jpg", href: "/" },
+  { title: "snap", src: "/photos/DSCF5579.jpg", href: "/" },
+  { title: "mode", src: "/photos/DSCF6627.jpg", href: "/" },
 ];
 
 type Props = {
@@ -25,6 +28,7 @@ export const PhotoThumbnails: FC<Props> = ({ setTitle }) => {
       modules={[Pagination]}
       pagination={{
         clickable: false,
+        dynamicBullets: true,
       }}
       onSlideChange={(s) => {
         setTitle(list[s.activeIndex].title);
