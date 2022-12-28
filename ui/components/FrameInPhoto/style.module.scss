@@ -1,5 +1,5 @@
-$frame-size: 82vw;
-$border-weight: 1rem;
+$frame-long-side: 84vw;
+$border-weight: 16px;
 
 .frameWrapper {
   display: flex;
@@ -9,84 +9,75 @@ $border-weight: 1rem;
   padding: 100px 0 50px;
 }
 
-.frame {
+.shadowCommon {
+  position: absolute;
+  content: "";
+  display: block;
+}
+
+.frameCommon {
   border: #333 $border-weight solid;
-  box-shadow: 0px 10px 6px -2px rgba(0, 0, 0, 0.5) inset;
+  box-shadow: 4px 10px 6px -2px rgba(0, 0, 0, 0.5) inset,
+    -16px 9px 20px -20px #444;
   position: relative;
   background-color: #f6f6f6;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  &::before {
+    @extend .shadowCommon;
+    top: calc(100% + $border-weight);
+    left: -$border-weight;
+    background-color: transparent;
+    opacity: 0.7;
+    width: calc(100% + $border-weight);
+    height: 1px;
+    border-top: 16px solid rgb(73, 73, 73);
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    z-index: -1;
+  }
+
+  &::after {
+    @extend .shadowCommon;
+    top: 0;
+    left: -$border-weight;
+    background-color: rgb(126, 126, 126);
+    opacity: 0.4;
+    width: calc(100% + $border-weight * 2 + 12px);
+    height: calc(100% + $border-weight + 26px);
+    z-index: -1;
+    border-radius: 2px;
+  }
+}
+
+.frame {
   &Vertical {
-    @extend .frame;
-    width: calc($frame-size * (3 / 4));
-    height: $frame-size;
+    @extend .frameCommon;
+    width: calc($frame-long-side * (3 / 4));
+    height: $frame-long-side;
   }
 
   &Horizontal {
-    @extend .frame;
-    width: $frame-size;
-    height: calc($frame-size * (4 / 3));
+    @extend .frameCommon;
+    width: $frame-long-side;
+    height: calc($frame-long-side * (4 / 3));
   }
 }
 
 .photo {
   display: block;
-  width: calc($frame-size - 188px);
-  height: calc($frame-size * (4 / 3) - 188px);
+  width: calc($frame-long-side - 188px);
+  height: calc($frame-long-side * (4 / 3) - 188px);
   object-fit: cover;
   border: 0.5rem solid;
   border-color: #aaaaaa #dee0db #ebecec #bdbdbd;
 }
 
-.shadowCommon {
-  position: absolute;
-  content: "";
-  display: block;
-  height: 100%;
-}
-
-.shadow {
-  filter: blur(3px);
-  position: absolute;
-  top: -$border-weight;
-  left: -$border-weight;
-  width: calc(100% + $border-weight * 2);
-  height: calc(100% + $border-weight * 2);
-  z-index: -1;
-  &::before {
-    @extend .shadowCommon;
-    top: 8px;
-    left: 0;
-    background-color: #999;
-    opacity: 0.8;
-    width: calc(100% + 8px);
-    height: calc(100% + 26px);
-  }
-  &::after {
-    $shadow-length: 26px;
-    @extend .shadowCommon;
-    bottom: -$shadow-length;
-    left: 0px;
-    background-color: #555;
-    opacity: 0.7;
-    width: calc(100%);
-    height: 50px;
-    clip-path: polygon(
-      100% 0,
-      100% calc(100% - $shadow-length),
-      calc(100% - 18px) 100%,
-      18px 100%,
-      0 calc(100% - $shadow-length),
-      0 0
-    );
-  }
-}
-
 .highLight {
   $blur-size: 50px;
   content: "";
-  // background-color: rgb(0, 235, 235);
   background-color: #ffffff;
   opacity: 0.7;
   position: absolute;

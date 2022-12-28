@@ -26,9 +26,7 @@ export const FrameInPhoto: FC<Props> = ({ title, href, src, isVertical }) => {
           alt={title}
           className={style.photo}
         />
-        <span className={style.shadow} />
       </Link>
-      <span className={style.highLight} />
     </div>
   );
 };
