@@ -1,4 +1,4 @@
-$frame-long-side: 100%;
+$frame-long-side: 52dvh;
 $border-weight: 8px;
 $shadow-height: 8px;
 
@@ -18,8 +18,8 @@ $shadow-height: 8px;
 }
 
 .frameCommon {
-  border: #333 $border-weight solid;
-  box-shadow: 4px 6px 6px -2px rgba(0, 0, 0, 0.5) inset;
+  border: rgb(68, 68, 68) $border-weight solid;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5) inset;
   position: relative;
   background-color: #ededed;
   display: flex;
@@ -69,7 +69,7 @@ $shadow-height: 8px;
 }
 .title {
   position: absolute;
-  bottom: 0.5rem;
+  bottom: 0.75rem;
   right: 0.25rem;
   transform: rotate(-10deg);
   font-size: 0.75rem;
