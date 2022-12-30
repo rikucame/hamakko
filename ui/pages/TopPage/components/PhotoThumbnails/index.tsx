@@ -10,8 +10,7 @@ import "@/styles/swiperCustom.scss";
 const list = [
   { title: "portrait", src: "/photos/DSCF5710.jpg", href: "/" },
   { title: "snap", src: "/photos/DSCF5579.jpg", href: "/" },
-  { title: "landscape", src: "/photos/0_thumbnail.jpg", href: "/" },
-  { title: "mood", src: "/photos/DSCF5579.jpg", href: "/" },
+  { title: "portrait", src: "/photos/DSCF5710.jpg", href: "/" },
 ];
 
 type Props = {
