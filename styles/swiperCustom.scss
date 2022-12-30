@@ -3,8 +3,8 @@
 }
 
 .swiper-pagination-bullet {
-  width: 24px;
-  height: 24px;
+  width: 14px;
+  height: 14px;
   border: 1px solid #333;
   background-color: transparent;
   opacity: 1;
@@ -15,8 +15,7 @@
 }
 
 .swiper-pagination {
-  width: 160px !important;
-  top: 50px;
-  height: 30px;
+  top: 28px;
   align-items: center;
+  pointer-events: none;
 }

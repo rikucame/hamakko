@@ -7,6 +7,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <html>
       <head>
         <link rel="stylesheet" href="https://use.typekit.net/sqa7avw.css" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </head>
       <body>
         <main>{children}</main>

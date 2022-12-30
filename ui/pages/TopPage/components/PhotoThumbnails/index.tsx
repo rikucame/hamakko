@@ -8,12 +8,10 @@ import "swiper/scss/pagination";
 import "@/styles/swiperCustom.scss";
 
 const list = [
+  { title: "portrait", src: "/photos/DSCF5710.jpg", href: "/" },
+  { title: "snap", src: "/photos/DSCF5579.jpg", href: "/" },
   { title: "portrait", src: "/photos/0_thumbnail.jpg", href: "/" },
   { title: "snap", src: "/photos/DSCF5579.jpg", href: "/" },
-  { title: "mode", src: "/photos/DSCF6627.jpg", href: "/" },
-  { title: "portrait", src: "/photos/0_thumbnail.jpg", href: "/" },
-  { title: "snap", src: "/photos/DSCF5579.jpg", href: "/" },
-  { title: "mode", src: "/photos/DSCF6627.jpg", href: "/" },
 ];
 
 type Props = {
@@ -23,7 +21,7 @@ type Props = {
 export const PhotoThumbnails: FC<Props> = ({ setTitle }) => {
   return (
     <Swiper
-      spaceBetween={50}
+      spaceBetween={28}
       slidesPerView={1}
       modules={[Pagination]}
       pagination={{

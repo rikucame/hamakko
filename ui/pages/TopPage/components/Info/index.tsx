@@ -2,46 +2,30 @@ import { FC } from "react";
 import Image from "next/image";
 import style from "./style.module.scss";
 
-type Props = {};
+type Props = {
+  photos: string[];
+  dir: string;
+};
 
-export const InfoNum: FC<Props> = () => {
+export const InfoNum: FC<Props> = ({ dir, photos }) => {
   return (
     <div className={style.wrap}>
       <ul className={style.grid}>
-        <li className={style.gridItem}>
-          <Image
-            src={"/photos/DSCF6519.jpg"}
-            width={200}
-            height={200}
-            alt={"sample"}
-            className={style.photo}
-          />
-        </li>
-        <li className={style.gridItem}>
-          <Image
-            src={"/photos/DSCF6519.jpg"}
-            width={200}
-            height={200}
-            alt={"sample"}
-            className={style.photo}
-          />
-        </li>
-        <li className={style.gridItem}>
-          <Image
-            src={"/photos/DSCF6519.jpg"}
-            width={200}
-            height={200}
-            alt={"sample"}
-            className={style.photo}
-          />
-        </li>
-        <li className={style.gridItem}>
-          <p className={style.more}>
-            <span className={style.moreAnd}>&</span>
-            <br /> MORE
-          </p>
-        </li>
+        {photos.map((src) => (
+          <li className={style.gridItem} key={src}>
+            <Image
+              src={`/photos/${dir}/${src}`}
+              width={200}
+              height={200}
+              alt={"sample"}
+              className={style.photo}
+            />
+          </li>
+        ))}
       </ul>
+      <a href="/" className={style.link}>
+        view All
+      </a>
     </div>
   );
 };
