@@ -18,7 +18,7 @@ export const FrameInPhoto: FC<Props> = ({ title, href, src, isVertical }) => {
         href={href}
         className={isVertical ? style.frameVertical : style.frameHorizontal}
       >
-        <H2 title={title} />
+        <p className={style.title}>{title}</p>
         <Image
           src={src}
           width={1000}

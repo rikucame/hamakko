@@ -1,0 +1,45 @@
+.wrap {
+  max-inline-size: max-content;
+  margin-inline: auto;
+  max-width: 88vw;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.grid {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 40px;
+
+  &Item {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.photo {
+  width: 20vw;
+  height: 20vw;
+  object-fit: cover;
+  box-shadow: 0 4px 5px -2px #444;
+}
+
+.more {
+  text-align: center;
+  font-size: 2rem;
+  &And {
+    font-size: 6rem;
+  }
+}
+
+.link {
+  margin-top: 50px;
+  padding: 4px;
+  font-size: 1.5rem;
+  border-bottom: 1px solid #333;
+}

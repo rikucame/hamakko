@@ -1,12 +1,14 @@
-$frame-long-side: 84vw;
-$border-weight: 16px;
+$frame-long-side: 52dvh;
+$border-weight: 8px;
+$shadow-height: 8px;
 
 .frameWrapper {
   display: flex;
   justify-content: center;
   position: relative;
   width: 100%;
-  padding: 100px 0 50px;
+  padding-top: 6dvh;
+  padding-bottom: max(2dvh, 20px);
 }
 
 .shadowCommon {
@@ -16,11 +18,10 @@ $border-weight: 16px;
 }
 
 .frameCommon {
-  border: #333 $border-weight solid;
-  box-shadow: 4px 10px 6px -2px rgba(0, 0, 0, 0.5) inset,
-    -18px -28px 28px -6px #fff;
+  border: rgb(68, 68, 68) $border-weight solid;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5) inset;
   position: relative;
-  background-color: #f6f6f6;
+  background-color: #ededed;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,11 +32,12 @@ $border-weight: 16px;
     left: -$border-weight;
     background-color: transparent;
     opacity: 0.7;
-    width: calc(100% + 12px);
+    width: calc(100% + 4px);
     height: 1px;
-    border-top: 16px solid rgb(73, 73, 73);
-    border-left: 12px solid transparent;
-    border-right: 8px solid transparent;
+    border-top: $shadow-height solid rgb(73, 73, 73);
+    $transpalent-border: calc($shadow-height - 2px) solid transparent;
+    border-left: $transpalent-border;
+    border-right: $transpalent-border;
     z-index: -1;
   }
 
@@ -46,46 +48,38 @@ $border-weight: 16px;
     background-color: rgb(126, 126, 126);
     opacity: 0.4;
     width: calc(100% + $border-weight * 2);
-    height: calc(100% + $border-weight * 2 + 26px);
+    height: calc(100% + $border-weight * 2 + $shadow-height + 6px);
     z-index: -1;
     border-radius: 2px;
   }
 }
 
 .frame {
-  &Vertical {
+  &Horizontal {
     @extend .frameCommon;
     width: calc($frame-long-side * (3 / 4));
     height: $frame-long-side;
   }
 
-  &Horizontal {
+  &Vertical {
     @extend .frameCommon;
     width: $frame-long-side;
     height: calc($frame-long-side * (4 / 3));
   }
 }
+.title {
+  position: absolute;
+  bottom: 0.75rem;
+  right: 0.25rem;
+  transform: rotate(-10deg);
+  font-size: 0.75rem;
+}
 
 .photo {
   display: block;
-  width: calc($frame-long-side - 188px);
-  height: calc($frame-long-side * (4 / 3) - 188px);
+  width: calc(100% - 64px);
+  height: calc(100% - 64px);
   object-fit: cover;
-  border: 0.5rem solid;
+  border: 6px solid;
   border-color: #aaaaaa #dee0db #ebecec #bdbdbd;
-}
-
-.highLight {
-  $blur-size: 50px;
-  content: "";
-  background-color: #ffffff;
-  opacity: 0.7;
-  position: absolute;
-  width: calc(100% - $blur-size * 3);
-  height: calc(50% - $blur-size * 3);
-  border-radius: 20%;
-  top: calc(50px + $blur-size);
-  left: calc($blur-size * 1.5);
-  filter: blur(50px);
-  z-index: -1;
 }
