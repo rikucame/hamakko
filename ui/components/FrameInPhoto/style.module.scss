@@ -69,10 +69,11 @@ $shadow-height: 8px;
 }
 .title {
   position: absolute;
-  bottom: 0.75rem;
-  right: 0.25rem;
+  bottom: 6px;
+  right: 16px;
   transform: rotate(-10deg);
   font-size: 0.75rem;
+  color: #666;
 }
 
 .photo {
