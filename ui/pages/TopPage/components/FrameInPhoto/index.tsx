@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FC } from "react";
-import { H2 } from "../HiddenHeading";
 import style from "./style.module.scss";
 
 type Props = {
