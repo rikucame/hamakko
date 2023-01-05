@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { FrameInPhoto } from "@/components/FrameInPhoto";
+import { FrameInPhoto } from "../FrameInPhoto";
 import { Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
