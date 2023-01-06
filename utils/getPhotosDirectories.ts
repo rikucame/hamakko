@@ -5,6 +5,5 @@ export const getPhotosDirectories = (dir: string): string[] => {
     .readdirSync(`./public/photos/${dir}`, { withFileTypes: true })
     .filter((item) => item.isDirectory())
     .map(({ name }) => name);
-  console.log(dirs);
   return dirs;
 };
