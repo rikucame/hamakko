@@ -1,0 +1,43 @@
+.header {
+  height: 30px;
+}
+
+.fixArea {
+  position: fixed;
+  top: 8px;
+  left: 3vw;
+  width: 94vw;
+  height: min-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.siteName {
+  height: min-content;
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.carouselWrap {
+  padding: 40px 0;
+}
+
+.menu {
+  width: 15px;
+  height: 15px;
+  border-top: 1px solid #555;
+  border-bottom: 1px solid #555;
+  position: relative;
+
+  &::before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #555;
+    top: 6px;
+    left: 0;
+  }
+}

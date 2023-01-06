@@ -13,7 +13,6 @@ export const TopPage = () => {
         <PhotoThumbnails setTitle={setTitle} />
       </div>
       <div className={style.carouselWrap}>
-        {/* <h1 className={style.title}>{title.toUpperCase()}</h1> */}
         <InfoNum dir={title} photos={["1.jpg", "2.jpg", "3.jpg"]} />
       </div>
     </div>
