@@ -9,7 +9,7 @@ export default async function Page({ params }: Props) {
   const photos = fs.readdirSync(`./public/photos/${params.id}`);
   return (
     <div className={style.wrap}>
-      <h1>{params.id}</h1>
+      <h1 className={style.pageTitle}>{params.id}</h1>
       {photos.map((photo) => (
         <div key={photo} className={style.photo}>
           <Image
