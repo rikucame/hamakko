@@ -1,7 +1,7 @@
 .wrap {
   max-inline-size: max-content;
   margin-inline: auto;
-  max-width: 88vw;
+  max-width: 80vw;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -23,8 +23,8 @@
 }
 
 .photo {
-  width: 20vw;
-  height: 20vw;
+  width: 60px;
+  height: 60px;
   object-fit: cover;
   box-shadow: 0 4px 5px -2px #444;
 }
@@ -38,7 +38,7 @@
 }
 
 .link {
-  margin-top: 50px;
+  margin-top: 60px;
   font-size: 1.5rem;
   line-height: 1;
   position: relative;
