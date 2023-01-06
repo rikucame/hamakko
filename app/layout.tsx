@@ -1,4 +1,5 @@
 import "@/styles/globals.scss";
+import style from "./style.module.scss";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   // console.log(num);
@@ -10,6 +11,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </head>
       <body>
+        <header className={style.header}>
+          <a href="/">Rikuto Ishikura</a>
+        </header>
         <main>{children}</main>
       </body>
     </html>
