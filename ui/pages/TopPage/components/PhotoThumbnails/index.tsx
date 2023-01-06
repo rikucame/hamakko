@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { FrameInPhoto } from "../FrameInPhoto";
+import { FrameInPhotoMemo as FrameInPhoto } from "../FrameInPhoto";
 import { Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -8,8 +8,8 @@ import "swiper/scss/pagination";
 import "@/styles/swiperCustom.scss";
 
 const list = [
-  { title: "portrait", src: "/photos/DSCF5710.jpg", href: "/" },
-  { title: "snap", src: "/photos/DSCF5579.jpg", href: "/" },
+  { title: "portrait", src: "/photos/DSCF5710.jpg", href: "/genre/portrait" },
+  { title: "snap", src: "/photos/DSCF5579.jpg", href: "/genre/snap" },
   { title: "mood", src: "/photos/DSCF5710.jpg", href: "/" },
 ];
 
