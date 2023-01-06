@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FC } from "react";
+import { FC, memo } from "react";
 import style from "./style.module.scss";
 
 type Props = {
@@ -10,7 +10,7 @@ type Props = {
   isVertical?: boolean;
 };
 
-export const FrameInPhoto: FC<Props> = ({ title, href, src, isVertical }) => {
+const FrameInPhoto: FC<Props> = ({ title, href, src, isVertical }) => {
   return (
     <div key={title} className={style.frameWrapper}>
       <Link
@@ -29,3 +29,5 @@ export const FrameInPhoto: FC<Props> = ({ title, href, src, isVertical }) => {
     </div>
   );
 };
+
+export const FrameInPhotoMemo = memo(FrameInPhoto);
