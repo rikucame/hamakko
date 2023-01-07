@@ -1,4 +1,9 @@
-.container {
+.wrap {
+  display: grid;
+  grid-template-rows: 40px 1fr;
+}
+
+.content {
   width: min(100%, 1200px);
   margin: 0 auto;
 }

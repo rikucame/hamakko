@@ -11,9 +11,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <link rel="stylesheet" href="https://use.typekit.net/sqa7avw.css" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </head>
-      <body>
+      <body className={style.wrap}>
         <Header />
-        <main className={style.container}>{children}</main>
+        <main className={style.content}>{children}</main>
       </body>
     </html>
   );
