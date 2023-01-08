@@ -1,12 +1,5 @@
 .header {
-  height: 30px;
-}
-
-.fixArea {
-  position: fixed;
-  top: 8px;
-  left: 3vw;
-  width: 94vw;
+  width: 100%;
   height: min-content;
   display: flex;
   justify-content: space-between;
@@ -17,10 +10,6 @@
   height: min-content;
   font-size: 14px;
   line-height: 14px;
-}
-
-.carouselWrap {
-  padding: 40px 0;
 }
 
 .menu {

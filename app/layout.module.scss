@@ -1,0 +1,19 @@
+.wrap {
+  display: grid;
+  grid-template-rows: 40px 1fr;
+  grid-template-columns: 100vw;
+}
+
+.headerWrap {
+  width: min(100%, 1200px);
+  padding-top: 8px;
+  padding-left: 12px;
+  padding-right: 12px;
+  position: fixed;
+  inset: 0;
+  margin: 0 auto;
+}
+
+.content {
+  margin-top: 40px;
+}

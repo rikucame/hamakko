@@ -23,7 +23,7 @@ export default async function Page({ params }: Props) {
               boxShadow: "0 3px 4px 0 #888888",
             }}
           />
-          <p className={style.title}>{photo}</p>
+          <p className={style.title}>{photo.split(".")[0]}</p>
         </div>
       ))}
     </div>
