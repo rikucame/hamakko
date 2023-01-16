@@ -10,7 +10,7 @@ type Props = {
 export const InfoNum: FC<Props> = ({ dir, photos }) => {
   return (
     <div className={style.wrap}>
-      <a href="/genre" className={style.link}>
+      <a href={`/genre/${dir}`} className={style.link}>
         view All
       </a>
       {/* <ul className={style.grid}>

@@ -1,6 +1,9 @@
 import { AppProps } from "next/app";
 import Head from "next/head";
 import "@/styles/globals.scss";
+
+import "swiper/css";
+import "swiper/css/pagination";
 import "@/styles/swiperCustom.scss";
 
 const App = ({ Component, pageProps }: AppProps) => (
