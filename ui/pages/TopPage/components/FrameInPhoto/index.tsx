@@ -13,18 +13,17 @@ type Props = {
 const FrameInPhoto: FC<Props> = ({ title, href, src, isVertical }) => {
   return (
     <div key={title} className={style.frameWrapper}>
-      <Link
-        href={href}
-        className={isVertical ? style.frameVertical : style.frameHorizontal}
-      >
-        <p className={style.title}>{title}</p>
-        <Image
-          src={src}
-          width={1000}
-          height={1000}
-          alt={title}
-          className={style.photo}
-        />
+      <Link href={href}>
+        <a className={isVertical ? style.frameVertical : style.frameHorizontal}>
+          <p className={style.title}>{title}</p>
+          <Image
+            src={src}
+            width={1000}
+            height={1000}
+            alt={title}
+            className={style.photo}
+          />
+        </a>
       </Link>
     </div>
   );

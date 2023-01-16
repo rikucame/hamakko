@@ -1,7 +1,7 @@
 import Link from "next/link";
 import style from "./header.module.scss";
 
-export default function Header() {
+export const Header = () => {
   return (
     <header className={style.header}>
       <Link href="/" className={style.siteName}>
@@ -10,4 +10,4 @@ export default function Header() {
       <span className={style.menu} />
     </header>
   );
-}
+};
