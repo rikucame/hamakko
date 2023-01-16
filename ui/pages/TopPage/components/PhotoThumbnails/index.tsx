@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 const list = [
   { title: "portrait", src: "/photos/DSCF5710.jpg", href: "/" },
-  { title: "snap", src: "/photos/DSCF5579.jpg", href: "/" },
+  { title: "snap", src: "/photos/snap/20220812.jpg", href: "/" },
   { title: "mood", src: "/photos/DSCF5710.jpg", href: "/" },
 ];
 

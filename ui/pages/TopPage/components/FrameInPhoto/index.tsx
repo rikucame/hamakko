@@ -16,13 +16,14 @@ const FrameInPhoto: FC<Props> = ({ title, href, src, isVertical }) => {
       <Link href={href}>
         <a className={isVertical ? style.frameVertical : style.frameHorizontal}>
           <p className={style.title}>{title}</p>
-          <Image
-            src={src}
-            width={1000}
-            height={1000}
-            alt={title}
-            className={style.photo}
-          />
+          <div className={style.photoWrap}>
+            <Image
+              src={src}
+              layout="fill"
+              alt={title}
+              className={style.photo}
+            />
+          </div>
         </a>
       </Link>
     </div>

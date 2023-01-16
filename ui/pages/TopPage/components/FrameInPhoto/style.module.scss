@@ -76,11 +76,16 @@ $shadow-height: 4px;
   color: #666;
 }
 
-.photo {
+.photoWrap {
   display: block;
   width: calc(100% - 64px);
   height: calc(100% - 64px);
   object-fit: contain;
-  border: 4px solid;
+  border: 2px solid;
   border-color: #aaaaaa #dee0db #ebecec #bdbdbd;
+  position: relative;
+}
+
+.photo {
+  object-fit: cover;
 }
