@@ -5,7 +5,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/scss";
 import "swiper/scss/pagination";
-import "@/styles/swiperCustom.scss";
 
 const list = [
   { title: "portrait", src: "/photos/DSCF5710.jpg", href: "/genre/portrait" },

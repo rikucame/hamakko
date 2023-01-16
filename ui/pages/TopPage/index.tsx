@@ -1,5 +1,3 @@
-"use client";
-
 import { useState } from "react";
 import { InfoNum } from "./components/Info";
 import { PhotoThumbnails } from "./components/PhotoThumbnails";

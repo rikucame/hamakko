@@ -10,6 +10,9 @@ type Props = {
 export const InfoNum: FC<Props> = ({ dir, photos }) => {
   return (
     <div className={style.wrap}>
+      <a href="/genre" className={style.link}>
+        view All
+      </a>
       {/* <ul className={style.grid}>
         {photos.map((src) => (
           <li className={style.gridItem} key={src}>
@@ -23,9 +26,6 @@ export const InfoNum: FC<Props> = ({ dir, photos }) => {
           </li>
         ))}
       </ul> */}
-      <a href="/" className={style.link}>
-        view All
-      </a>
     </div>
   );
 };
