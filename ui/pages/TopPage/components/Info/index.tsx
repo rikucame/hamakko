@@ -1,6 +1,7 @@
 import { FC } from "react";
 import Image from "next/image";
 import style from "./style.module.scss";
+import Link from "next/link";
 
 type Props = {
   photos: string[];
@@ -10,6 +11,9 @@ type Props = {
 export const InfoNum: FC<Props> = ({ dir, photos }) => {
   return (
     <div className={style.wrap}>
+      <Link href={`/genre/${dir}`} className={style.link}>
+        view All
+      </Link>
       {/* <ul className={style.grid}>
         {photos.map((src) => (
           <li className={style.gridItem} key={src}>
@@ -23,9 +27,6 @@ export const InfoNum: FC<Props> = ({ dir, photos }) => {
           </li>
         ))}
       </ul> */}
-      <a href="/" className={style.link}>
-        view All
-      </a>
     </div>
   );
 };
